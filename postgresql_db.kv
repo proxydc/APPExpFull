@@ -1,0 +1,79 @@
+MainBox:
+
+<GridScreen>:
+    shopname:shopname
+    shopby:shopby
+    foodtype:foodtype
+    card:card
+    amount:amount
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+
+        Label:
+            text:'Shop Name'
+
+        TextInput:
+            id:shopname
+            multiline:False
+
+        Label:
+            text:'Shopped By'
+
+        TextInput:
+            id:shopby
+            multiline:False
+
+        Label:
+            text:'Food Type'
+
+        TextInput:
+            id:foodtype
+            multiline:False
+
+        Label:
+            text:'Card Name'
+
+        TextInput:
+            id:card
+            multiline:False
+
+        Label:
+            text:'Amount'
+
+        TextInput:
+            id:amount
+            multiline:False
+    Button:
+        text:"Add"
+        font_size:32
+        on_press:root.press()
+
+    GridLayout:
+        cols:2
+        orientation: 'vertical'
+        size: 100, 100
+        
+        Label:
+            id: word_label
+            text_size: self.size
+            halign: 'center'
+            valign: 'middle'
+            text: 'Enter A Namee'
+
+        TextInput:
+            id: word_input
+            multiline: False
+            size_hint: (1, .5)  
+
+        Button:
+            size_hint: (1, .5)  
+            font_size: 32
+            text: "Submit Name"
+            on_press: app.submit()
+
+        Button:
+            size_hint: (1, .5)  
+            font_size: 32
+            text: "Show Records"
+            on_press: app.show_records()      
