@@ -1,0 +1,73 @@
+MDFloatLayout:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        
+        Label:
+            text:'Shop Name'
+            size_hint: (1, .5)
+        TextInput:
+            id:shopname
+            multiline:False
+            size_hint: (1, .5) 
+
+        Label:
+            text:'Shopped By'
+            size_hint: (1, .5)
+            
+
+        TextInput:
+            id:shopby
+            multiline:False
+            size_hint: (1, .5) 
+
+        Label:
+            text:'Food Type'
+            size_hint: (1, .5)
+
+        TextInput:
+            id:foodtype
+            multiline:False
+            size_hint: (1, .5) 
+
+        Label:
+            text:'Card Name'
+            size_hint: (1, .5)
+
+        TextInput:
+            id:card
+            multiline:False
+            size_hint: (1, .5) 
+
+        Label:
+            text:'Amount'
+            size_hint: (1, .5)
+
+        TextInput:
+            id:amount
+            multiline:False
+            size_hint: (1, .5) 
+        Label:
+            id: wordlabel
+            text_size: self.size
+            halign: 'center'
+            valign: 'middle'
+            text: 'Enter A Name'
+            size_hint: (1, .5)
+        Button:
+            size_hint: (1, .5)  
+            font_size: 32
+            text: "Add Expense"
+            on_press: app.submit()
+
+        TextInput:
+            id: wordlabel
+            multiline:True
+            text: ''
+            #size_hint: (1, .5) 
+
+        Button:
+            size_hint: (1, .5)  
+            font_size: 32
+            text: "Show Records"
+            on_press: app.show_records()      

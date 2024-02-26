@@ -1,0 +1,57 @@
+
+<ExpGrid>
+    shopname:shopname
+    shopby:shopby
+    foodtype:foodtype
+    card:card
+    amount:amount
+    wordlabel:wordlabel
+    GridLayout:
+        cols:1
+        size:root.width, root.height
+
+        GridLayout:
+            cols:2
+
+            TextInput:
+                id:wordlabel
+                text: 'Enter an expense'
+
+            Label:
+                text:'Shop Name'
+
+            TextInput:
+                id:shopname
+                multiline:False
+
+            Label:
+                text:'Shopped By'
+
+            TextInput:
+                id:shopby
+                multiline:False
+
+            Label:
+                text:'Food Type'
+
+            TextInput:
+                id:foodtype
+                multiline:False
+
+            Label:
+                text:'Card Name'
+
+            TextInput:
+                id:card
+                multiline:False
+
+            Label:
+                text:'Amount'
+
+            TextInput:
+                id:amount
+                multiline:False
+        Button:
+            text:"Add"
+            font_size:32
+            on_press:root.press()

@@ -44,36 +44,36 @@ MainBox:
         TextInput:
             id:amount
             multiline:False
-    Button:
-        text:"Add"
-        font_size:32
-        on_press:root.press()
-
-    GridLayout:
-        cols:2
-        orientation: 'vertical'
-        size: 100, 100
-        
-        Label:
-            id: word_label
-            text_size: self.size
-            halign: 'center'
-            valign: 'middle'
-            text: 'Enter A Namee'
-
-        TextInput:
-            id: word_input
-            multiline: False
-            size_hint: (1, .5)  
-
         Button:
-            size_hint: (1, .5)  
-            font_size: 32
-            text: "Submit Name"
-            on_press: app.submit()
+            text:"Add"
+            font_size:32
+            on_press:root.press()
 
-        Button:
-            size_hint: (1, .5)  
-            font_size: 32
-            text: "Show Records"
-            on_press: app.show_records()      
+        GridLayout:
+            cols:2
+            orientation: 'vertical'
+            size: 100, 100
+            
+            Label:
+                id: word_label
+                text_size: self.size
+                halign: 'center'
+                valign: 'middle'
+                text: 'Enter A Namee'
+
+            TextInput:
+                id: word_input
+                multiline: False
+                size_hint: (1, .5)  
+
+            Button:
+                size_hint: (1, .5)  
+                font_size: 32
+                text: "Submit Name"
+                on_press: app.submit()
+
+            Button:
+                size_hint: (1, .5)  
+                font_size: 32
+                text: "Show Records"
+                on_press: app.show_records()      
