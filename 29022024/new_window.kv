@@ -1,0 +1,99 @@
+WindowManager:
+    FirstWindow:
+    SecondWindow:
+
+<FirstWindow>:
+    name: "first"
+    size_hint: .7,1
+    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+    GridLayout:
+        spacing: '5dp'
+        cols:1
+        Image:
+            source:"logo.jpeg"
+
+        GridLayout:
+            cols:2
+            spacing: '5dp'
+            Label:
+                text:'Shop Name'
+                color: 0,0,0,1
+                bold: True
+                font_size: '18dp'
+                #size_hint: (1, .5)
+            TextInput:
+                id:shopname
+                multiline:False
+                #size_hint: (1, .5) 
+
+            Label:
+                text:'Shopped By'
+                color: 0,0,0,1
+                bold: True
+                font_size: '18dp'
+                #size_hint: (1, .5)
+                
+
+            TextInput:
+                id:shopby
+                multiline:False
+
+            Label:
+                text:'Food Type'
+                color: 0,0,0,1
+                bold: True
+                font_size: '18dp'
+
+            TextInput:
+                id:foodtype
+                multiline:False
+
+            Label:
+                text:'Card Name'
+                color: 0,0,0,1
+                bold: True
+                font_size: '18dp'
+
+            TextInput:
+                id:card
+                multiline:False
+
+
+            Label:
+                text:'Amount'
+                color: 0,0,0,1
+                bold: True
+                font_size: '18dp'
+
+            TextInput:
+                id:amount
+                multiline:False
+
+            
+        Button:             
+            background_color: 1,1,0,1
+            background_normal: ''
+            bold: True
+            font_size: '26dp'
+            text: "Add Expense"
+            size_hint: 1,.4
+            on_press: root.submit()
+        Button:             
+            background_color: 1,1,0,1
+            background_normal: ''
+            bold: True
+            font_size: '26dp'
+            text: "Show Records"
+            size_hint: 1,.4
+            on_release: app.root.current="second"
+        Label:
+            #id: root.wordlabel
+            color: 1,0,0,1
+            bold: True
+            font_size: '20dp'
+            text: root.wordlabel
+<SecondWindow>:
+    name: "second"
+    
+
+    
